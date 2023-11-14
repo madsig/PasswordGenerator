@@ -1,2 +1,2 @@
 # PasswordGenerator
-"14 lLssdd" ligger som "commandLineAegs" i launchSettings.json
+"14 lLssdd" ligger som "commandLineArgs" i launchSettings.json
