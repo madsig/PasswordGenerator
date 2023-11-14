@@ -20,23 +20,16 @@
             var password = "";
             while (pattern.Length > 0)
             {
-                var randomIndex = Generate.rng(0, pattern.Length);
+                var randomIndex = Generate.Rng(0, pattern.Length);
 
-                switch (pattern[randomIndex])
+                password += pattern[randomIndex] switch
                 {
-                    case 'L':
-                        password += Generate.WriteRandomUpperCaseLetter();
-                        break;
-                    case 'l':
-                        password += Generate.WriteRandomLowerCaseLetter();
-                        break;
-                    case 'd':
-                        password += Generate.WriteRandomDigit();
-                        break;
-                    case 's':
-                        password += Generate.WriteRandomSpecialCharacter();
-                        break;
-                }
+                    'l' => Generate.WriteRandomLowerCaseLetter(),
+                    'L' => Generate.WriteRandomUpperCaseLetter(),
+                    'd' => Generate.WriteRandomDigit(),
+                    's' => Generate.WriteRandomSpecialCharacter(),
+                    _ => ' ',
+                };
 
                 pattern = pattern.Remove(randomIndex, 1);
             }
