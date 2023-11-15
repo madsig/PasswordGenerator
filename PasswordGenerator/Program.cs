@@ -14,8 +14,10 @@
             var pattern = args[1];
             while (pattern.Length < length) pattern += 'l';
 
+            Console.ForegroundColor = ConsoleColor.DarkGray;
             Console.WriteLine($"input lengde: {pattern.Length}");
             Console.WriteLine($"input: {pattern}"); 
+            Console.ResetColor();
             
             var password = "";
             while (pattern.Length > 0)

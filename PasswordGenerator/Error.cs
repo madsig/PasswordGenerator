@@ -19,6 +19,9 @@
 
         public static void ShowHelpText()
         {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Feil parameter");
+            Console.ResetColor();
             Console.WriteLine("PasswordGenerator  \r\nOptions:\r\n- l = liten bokstav\r\n- L = stor bokstav\r\n- d = siffer\r\n- s = spesialtegn (!\"#\u00a4%&/(){}[]\r\nEksempel: PasswordGenerator 14 lLssdd\r\n    betyr\r\n        Min. 1 liten bokstav\r\n        Min. 1 1 stor bokstav\r\n        Min. 2 spesialtegn\r\n        Min. 2 sifre\r\n        Lengde på passordet skal være 14");
         }
     }
